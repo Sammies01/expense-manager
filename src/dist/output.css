@@ -829,8 +829,8 @@ video {
     right: 0.5rem;
   }
 
-  .md\:top-0 {
-    top: 0px;
+  .md\:top-1 {
+    top: 0.25rem;
   }
 
   .md\:flex {
@@ -839,6 +839,16 @@ video {
 
   .md\:w-4\/5 {
     width: 80%;
+  }
+
+  .md\:bg-red-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+  }
+
+  .md\:bg-red-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 226 226 / var(--tw-bg-opacity));
   }
 
   .md\:bg-blue-100 {
