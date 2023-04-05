@@ -98,6 +98,8 @@ transactions.forEach(transaction => transactionList.appendChild(createTransactio
 
 updateBalance();
 
+
+
 // ************************************************************************************
 // ******************************************************************************
 
