@@ -3,7 +3,7 @@
     "short_name": "Expense-Manager",	
     "start_url": "./",
     "orientation": "any",
-    "theme_color": "#ffc252",
+    "theme_color": "#0D094F",
     "scope": "./",
     "display": "standalone",
     "icons": [
