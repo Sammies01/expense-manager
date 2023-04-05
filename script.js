@@ -96,6 +96,8 @@ transactionForm.addEventListener('submit', addTransaction);
 // Add existing transactions to the list
 transactions.forEach(transaction => transactionList.appendChild(createTransactionElement(transaction)));
 
+updateBalance();
+
 // ************************************************************************************
 // ******************************************************************************
 
