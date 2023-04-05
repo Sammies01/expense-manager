@@ -2,7 +2,7 @@
 <script>
   if ('serviceWorker' in navigator) {
     // Register the service worker file
-    navigator.serviceWorker.register('sw.js')
+    navigator.serviceWorker.register('https://sammies01.github.io/sw.js')
       .then(registration => {
         console.log('Service worker registered:', registration);
       })
