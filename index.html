@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="manifest" href="app.webmanifest">
     <title>Expense Manager</title>
-   </head>
+</head>
 
 <body class="md:bg-blue-100 bg-blue-200 h-full">
     <header
@@ -80,7 +80,18 @@
     </div>
 
     <script src="script.js"></script>
-    <script src="sw-register.js"></script>
+    <!-- <script src="sw-register.js"></script> -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service worker registered:', registration);
+                })
+                .catch(error => {
+                    console.error('Service worker registration failed:', error);
+                });
+        }
+    </script>
 </body>
 
 </html>
