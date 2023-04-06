@@ -1,0 +1,26 @@
+{
+"name": "Expense Manager",
+"start_url": "./",
+"display": "standalone",
+"theme_color": "#000449",
+"background_color": "#DFE1FF",
+"orientation": "portrait",
+"icons": [
+    {
+        "src": "icons/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "icons/icon-1024.jpg",
+        "sizes": "1024x1024",
+        "type": "image/jpg"
+    },
+    {
+        "src": "icons/icon-maskable-512.png",
+        "sizes": "512x512",
+        "type": "image/png",  
+        "purpose": "maskable" 
+    }
+]
+}

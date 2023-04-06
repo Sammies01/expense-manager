@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="manifest" href="manifest.json" />
+    <script>navigator.serviceWorker.register("service-worker.js")</script>
+    <title>Expense Manager</title>
+</head>
+
+<body class="md:bg-blue-100 bg-blue-200 h-full">
+    <header
+        class="w-screen bg-blue-900 flex items-center justify-center text-center md:text-5xl text-4xl p-3 font-bold font-serif">
+        <span class="text-white">Expense Manager</span>
+    </header>
+    <div class="flex flex-col items-center justify-center my-10">
+
+        <div class="md:w-4/5 w-80 bg-blue-300 rounded-2xl p-2 space-y-4 shadow-lg shadow-gray-600">
+            <div class="">
+                <p class="md:text-lg text-base font-medium">Your Balance</p>
+                <p id="balance" class="md:text-6xl text-3xl font-semibold w-fit">N0.00</p>
+            </div>
+            <div class="grid grid-cols-2 divide-x md:px-5 px-1 py-5 bg-white md:text-2xl text-lg font-medium">
+                <div class="items-center">
+                    <p class="md:text-lg text-base">Income</p>
+                    <p id="income" class="md:text-lg text-sm text-green-700">+N0.00</p>
+                </div>
+                <div>
+                    <p class="md:text-lg text-base">Expenses</p>
+                    <p id="expenses" class="md:text-lg text-sm text-red-700">-N0.00</p>
+                </div>
+            </div>
+            <p class="text-lg font-medium pt-4 border-b-2 border-slate-300">Add a transaction</p>
+            <form id="transaction-form">
+                <div class="space-y-2 ">
+                    <div>
+                        <span>Transaction Type</span>
+                        <select id="transaction-type">
+                            <option>Select Transaction Type</option>
+                            <option>Income</option>
+                            <option>Expense</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <p>Name</p>
+                        <input id="transaction-name" type="text" class="w-full border-1 p-1 "
+                            placeholder="Enter Details">
+                    </div>
+                    <div class="space-y-1 pb-2">
+                        <p>Amount</p>
+                        <input id="transaction-amount" type="number" step="0.01" class="w-full border-1 p-1 "
+                            placeholder="Enter Amount">
+                    </div>
+
+                    <button type="submit"
+                        class="rounded-md bg-blue-600 hover:bg-blue-700 p-1 w-full text-white font-semibold">Add
+                        Transaction</button>
+                </div>
+            </form>
+            <p class="text-lg font-medium pt-3 border-b-2 border-slate-300">Transactions History</p>
+            <ul id="transaction-list" class="space-y-2 font-serif font-medium">
+                <!-- <li
+                    class="minus bg-orange-50 p-1 border-r-4 border-red-600 md:flex block justify-between relative md:text-base text-xs">
+                    Cash <span class=" font-normal block mr-8">-N400</span>
+                    <button
+                        class="delete-btn bg-red-500 text-white text-base px-1 rounded-full absolute md:right-2 right-2 md:top-1 top-2 opacity-30 hover:opacity-100 ease-out duration-700">x</button>
+                </li>
+                <li
+                    class="plus bg-orange-50 p-1 border-r-4 border-green-600 md:flex block justify-between relative md:text-base text-xs">
+                    Cash <span class="font-normal block mr-8">+N400</span>
+                    <button
+                        class="delete-btn bg-red-500 text-white text-base px-1 rounded-full absolute md:right-2 right-2 md:top-1 top-2 opacity-30 hover:opacity-100 ease-out duration-700">x</button>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script src="sw-register.js"></script> -->
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', {scope: '{repository}/'} )
+                .then(registration => {
+                    console.log('Service worker registered:', registration);
+                })
+                .catch(error => {
+                    console.error('Service worker registration failed:', error);
+                });
+        }
+    </script> -->
+</body>
+
+</html>
