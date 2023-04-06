@@ -5,7 +5,7 @@ const CACHE_NAME_PREFIX = 'Expense-Manager';
 const CACHE_VERSION = 'v2';
 const CACHE_NAME = `${CACHE_NAME_PREFIX}-${CACHE_VERSION}`;
 
-const assets = ['/', '/index.html', '/dist/output.css', '/scripts.js'];
+const assets = ['/', '/index.html', '/dist/output.css', '/scripts.js', '/icon/icon-512.png', '/icon/icon-1024.jpg', '/icon/icon-maskable-512.png', '/images/favicon.ico', 'input.css'];
 
 self.addEventListener('install', event => {
   event.waitUntil(
