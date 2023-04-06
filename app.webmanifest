@@ -1,7 +1,7 @@
 {
     "name": "Expense Manager",
     "short_name": "Expense-Manager",	
-    "start_url": "/expense-manager/index.html",
+    "start_url": "./",
     "orientation": "any",
     "theme_color": "#0D094F",
     "scope": "./",
