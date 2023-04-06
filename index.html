@@ -83,15 +83,28 @@
     <script src="script.js"></script>
 <!--     <script src="sw-register.js"></script> -->
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('https://sammies01.github.io/expense-manager/sw.js', {scope: 'https://sammies01.github.io/expense-manager/'})
-                .then(registration => {
-                    console.log('Service worker registered:', registration);
-                })
-                .catch(error => {
-                    console.error('Service worker registration failed:', error);
-                });
-        }
+//         if ('serviceWorker' in navigator) {
+//             navigator.serviceWorker.register('https://sammies01.github.io/expense-manager/sw.js', {scope: 'https://sammies01.github.io/expense-manager/'})
+//                 .then(registration => {
+//                     console.log('Service worker registered:', registration);
+//                 })
+//                 .catch(error => {
+//                     console.error('Service worker registration failed:', error);
+//                 });
+//         }
+        // Register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(error => {
+        console.error('Service Worker registration failed:', error);
+      });
+  });
+}
+
     </script>
 </body>
 
