@@ -84,7 +84,7 @@
 <!--     <script src="sw-register.js"></script> -->
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('https://sammies01.github.io/expense-manager/sw.js' {scope: '/sammies01.github.io/expense-manager/'})
+            navigator.serviceWorker.register('https://sammies01.github.io/expense-manager/sw.js' {scope: 'https://sammies01.github.io/expense-manager/'})
                 .then(registration => {
                     console.log('Service worker registered:', registration);
                 })
